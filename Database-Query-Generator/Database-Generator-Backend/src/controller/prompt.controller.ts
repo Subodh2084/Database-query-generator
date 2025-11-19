@@ -14,8 +14,8 @@ async function promptController(
   try {
     console.log(req.ip);
     const queryParams = addDefaultIfNotExists(req.query?.database as string);
-    const promptRequest = req.body?.content as string;
-    const promptMapper = new PromptMapper(
+     const promptRequest = req.body?.content as string;
+     const promptMapper = new PromptMapper(
       queryParams,
       promptRequest
     ).getPromptMapper();
